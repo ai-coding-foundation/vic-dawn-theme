@@ -1,5 +1,15 @@
 {
   "sections": {
+    "fancy_hero": {
+      "type": "fancy-hero",
+      "settings": {
+        "heading": "Fancy hero",
+        "subtext": "Experience 3D interactions",
+        "model_src": "https://modelviewer.dev/shared-assets/models/Astronaut.glb",
+        "button_label": "Shop now",
+        "button_link": "/collections/all"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -29,11 +39,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -63,10 +69,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,
@@ -117,11 +120,7 @@
           }
         }
       },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+      "block_order": ["collection-0", "product", "collection-1"],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -176,11 +175,7 @@
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -199,12 +194,5 @@
       }
     }
   },
-  "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
-  ]
+  "order": ["fancy_hero", "image_banner", "rich_text", "featured_collection", "collage", "video", "multicolumn"]
 }

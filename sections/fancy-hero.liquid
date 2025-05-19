@@ -1,0 +1,58 @@
+{{ 'fancy-hero.css' | asset_url | stylesheet_tag }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer="defer"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<div class="fancy-hero">
+  <model-viewer src="{{ section.settings.model_src }}" auto-rotate camera-controls></model-viewer>
+  <div class="fancy-hero__content">
+    <h1 class="fancy-hero__heading">{{ section.settings.heading }}</h1>
+    <p class="fancy-hero__subtext">{{ section.settings.subtext }}</p>
+    {% if section.settings.button_label != blank %}
+      <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+    {% endif %}
+  </div>
+</div>
+
+<script src="{{ 'fancy-hero.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Fancy hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Welcome"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "A stylish hero section with a 3D model."
+    },
+    {
+      "type": "url",
+      "id": "model_src",
+      "label": "3D model URL",
+      "default": "https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fancy hero"
+    }
+  ]
+}
+{% endschema %}
