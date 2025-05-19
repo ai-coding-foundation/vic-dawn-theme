@@ -70,6 +70,12 @@
       padding-top: 0.5rem;
     }
   }
+
+  /* Sticky header style when scrolled */
+  sticky-header.scrolled-past-header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+  }
 </style>
 
 {%- style -%}
@@ -303,6 +309,7 @@
     connectedCallback() {
       this.header = document.querySelector('.section-header');
       this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+      this.stickyOnScroll = this.getAttribute('data-sticky-type') === 'on-scroll-down';
       this.headerBounds = {};
 
       this.setHeaderHeight();
@@ -348,6 +355,16 @@
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (this.stickyOnScroll) {
+        if (scrollTop > this.headerBounds.bottom) {
+          this.header.classList.add('shopify-section-header-sticky', 'scrolled-past-header');
+        } else {
+          this.header.classList.remove('shopify-section-header-sticky', 'scrolled-past-header');
+        }
+        this.currentScrollTop = scrollTop;
+        return;
+      }
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.header.classList.add('scrolled-past-header');
@@ -530,6 +547,10 @@
         {
           "value": "on-scroll-up",
           "label": "t:sections.header.settings.sticky_header_type.options__2.label"
+        },
+        {
+          "value": "on-scroll-down",
+          "label": "On scroll"
         },
         {
           "value": "always",
