@@ -1,5 +1,7 @@
 # Dawn
 
+**Note**: This repository contains the *LiveSlowDieOld* theme built on top of Dawn. It adds a Lookbook page, FAQ section, and a size guide modal.
+
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
 
