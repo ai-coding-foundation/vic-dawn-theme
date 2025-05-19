@@ -1,0 +1,26 @@
+.fancy-announcement-bar .announcement-bar__message span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fancy-announcement-bar .announcement-bar__message span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.fancy-announcement-bar .announcement-bar__link:hover span,
+.fancy-announcement-bar .announcement-bar__message span:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.fancy-announcement-bar .announcement-bar__link:hover span::after,
+.fancy-announcement-bar .announcement-bar__message span:hover::after {
+  opacity: 1;
+}
