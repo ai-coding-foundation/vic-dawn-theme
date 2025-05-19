@@ -101,18 +101,21 @@ Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-a
 1. Copy `templates/page.lookbook.json` into your theme if it isn't already present.
 2. From the Shopify admin, create a new page and assign it the **lookbook** template.
 3. Use the theme editor to customize the banner and collage sections that come with the template.
+4. Refer to `docs/lookbook-screenshot.png` for an example layout.
 
 ### FAQ accordion
 
 1. Open the theme editor on the page where you want FAQs.
 2. Add a **Collapsible content** section.
 3. Configure each block with your questions and answers to build an accordion style FAQ.
+4. A sample configuration is shown in `docs/faq-screenshot.png`.
 
 ### Size Guide modal
 
 1. Create a page with your size guide information.
 2. In the product page's main section, add a **Popup** block.
 3. Select the size guide page in the block settings and adjust the link label as needed.
+4. See `docs/size-guide-screenshot.png` for how the modal appears.
 
 ## Contributing
 

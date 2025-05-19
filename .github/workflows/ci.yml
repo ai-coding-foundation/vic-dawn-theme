@@ -24,3 +24,12 @@ jobs:
         uses: shopify/theme-check-action@v2
         with:
           token: ${{ github.token }}
+  tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: |
+          node tests/logger.test.js
+          node tests/cart.test.js

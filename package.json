@@ -1,0 +1,17 @@
+{
+  "name": "vic-dawn-theme",
+  "version": "1.0.0",
+  "description": "**Note**: This repository contains the *LiveSlowDieOld* theme built on top of Dawn. It adds a Lookbook page, FAQ section, and a size guide modal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/logger.test.js && node tests/cart.test.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./pre-commit"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

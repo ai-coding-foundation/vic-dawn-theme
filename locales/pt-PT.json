@@ -178,7 +178,8 @@
       },
       "taxes_included": "Impostos incluídos.",
       "duties_included": "Encargos incluídos.",
-      "duties_and_taxes_included": "Encargos e impostos incluídos."
+      "duties_and_taxes_included": "Encargos e impostos incluídos.",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "Galeria de conteúdo multimédia"
@@ -219,6 +220,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Página não encontrada",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Não foram encontrados resultados para \"{{ terms }}\". Verifique a ortografia ou utilize uma palavra ou frase diferente.",
       "page": "Página",
@@ -267,10 +272,6 @@
         "error_heading": "Ajuste o seguinte:",
         "title": "Formulário de contacto"
       }
-    },
-    "404": {
-      "title": "Página não encontrada",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -385,16 +386,16 @@
       "step_error": "Só pode adicionar este item em incrementos de {{ step }}"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "País/região",
     "language_label": "Idioma",

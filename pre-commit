@@ -1,0 +1,2 @@
+#!/bin/sh
+npx prettier -c . && bin/theme-check

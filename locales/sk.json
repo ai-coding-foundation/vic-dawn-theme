@@ -179,7 +179,8 @@
       },
       "taxes_included": "Vrátane daní.",
       "duties_included": "Vrátane ciel.",
-      "duties_and_taxes_included": "Vrátane ciel a daní."
+      "duties_and_taxes_included": "Vrátane ciel a daní.",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "Galéria médií"
@@ -223,6 +224,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Stránka sa nenašla",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Pre výraz „{{ terms }}“ sa nenašli žiadne výsledky. Skontrolujte pravopis alebo použite iné slovo či slovné spojenie.",
       "title": "Výsledky vyhľadávania",
@@ -276,10 +281,6 @@
         "error_heading": "Upravte tieto údaje:",
         "title": "Kontaktný formulár"
       }
-    },
-    "404": {
-      "title": "Stránka sa nenašla",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -397,16 +398,16 @@
       "step_error": "Túto položku môžete pridať iba v prírastkoch po {{ step }}"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "Krajina/oblasť",
     "language_label": "Jazyk",
