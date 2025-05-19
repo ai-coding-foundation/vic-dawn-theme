@@ -1,29 +1,14 @@
-{% comment %}
-  Size guide modal. Render with a variable 'content' for the guide HTML.
-{% endcomment %}
 
-<button
-  type="button"
-  class="button size-guide__toggle"
-  aria-haspopup="dialog"
-  aria-controls="SizeGuideModal"
->
-  {{ 'products.product.size_guide' | t }}
-</button>
+{{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
 
 <modal-dialog id="SizeGuideModal" class="size-guide-modal">
-  <div
-    role="dialog"
-    aria-modal="true"
-    aria-label="{{ 'products.product.size_guide' | t }}"
-    class="size-guide-modal__content"
-    tabindex="-1"
-  >
-    <button type="button" class="size-guide-modal__close" aria-label="{{ 'accessibility.close' | t }}">
+  <div role="dialog" aria-modal="true" class="size-guide-modal__content" tabindex="-1">
+    <button type="button" class="size-guide-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
       {{ 'icon-close.svg' | inline_asset_content }}
     </button>
-    <div class="size-guide-modal__body rte">
-      {{ content }}
+    <div class="size-guide-modal__content-info">
+      {%- comment -%} Size guide content goes here {%- endcomment -%}
+      {{ size_guide_content }}
     </div>
   </div>
 </modal-dialog>
