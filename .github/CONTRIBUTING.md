@@ -87,27 +87,35 @@ You can follow these steps to go from setting up a store to creating a pull requ
 
 1. Set up a [development store](https://shopify.dev/themes/tools/development-stores) so you can test your code changes (assuming you don't already have a store).
 2. Install the [Shopify CLI](https://github.com/Shopify/shopify-cli) by following [these steps](https://shopify.dev/themes/tools/cli/installation).
-3. Fork the repository, clone it and create a new branch:
+3. Install [Theme Check](https://github.com/shopify/theme-check):
+```sh
+gem install theme-check
+```
+4. Fork the repository, clone it and create a new branch:
 ```sh
 git clone git@github.com:your-username/dawn.git
 cd dawn
 git checkout -b your-new-branch-name
 ```
-4. Launch a development server:
+5. Launch a development server:
 ```sh
 shopify theme serve
 ```
-5. Add your changes to the codebase.
-6. Commit your changes:
+6. Add your changes to the codebase.
+7. Lint your theme:
+```sh
+bin/theme-check
+```
+8. Commit your changes:
 ```sh
 git commit -a -m="Your commit message"
 ```
-7. Push your commit to your forked repository:
+9. Push your commit to your forked repository:
 ```sh
 git push origin your-new-branch-name
 ```
-8. Open a pull request. See [GitHub's official documentation](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) for more details.
-9. Before you can merge your pull request, you must sign Shopify's [Contributor License Agreement (CLA)](https://cla.shopify.com/).
+10. Open a pull request. See [GitHub's official documentation](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) for more details.
+11. Before you can merge your pull request, you must sign Shopify's [Contributor License Agreement (CLA)](https://cla.shopify.com/).
 
 ## Reporting a bug
 
