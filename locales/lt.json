@@ -179,7 +179,8 @@
       },
       "taxes_included": "Mokesčiai įtraukti.",
       "duties_included": "Muito mokesčiai įtraukti.",
-      "duties_and_taxes_included": "Muito ir kiti mokesčiai įtraukti."
+      "duties_and_taxes_included": "Muito ir kiti mokesčiai įtraukti.",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "Medijų galerija"
@@ -223,6 +224,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Puslapis nerastas",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nerasta jokių rezultatų pagal užklausą „{{ terms }}“. Patikrinkite rašybą arba vartokite kitą žodį ar frazę.",
       "page": "Puslapis",
@@ -276,10 +281,6 @@
         "error_heading": "Pakoreguokite toliau pateiktą informaciją.",
         "title": "Kontaktinė forma"
       }
-    },
-    "404": {
-      "title": "Puslapis nerastas",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -397,16 +398,16 @@
       "step_error": "Galima pridėti tik po {{ step }} vnt. šios prekės"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "Šalis / regionas",
     "language_label": "Kalba",

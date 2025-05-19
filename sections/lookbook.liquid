@@ -51,7 +51,7 @@
                 height="{{ block.settings.image.height }}"
               >
             {%- else -%}
-              {{ 'image' | placeholder_svg_tag }}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg', 'Placeholder image' }}
             {%- endif -%}
           {%- if block.settings.link != blank -%}
             </a>

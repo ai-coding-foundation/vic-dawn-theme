@@ -177,7 +177,8 @@
       },
       "taxes_included": "已包含稅額。",
       "duties_included": "已包含關稅。",
-      "duties_and_taxes_included": "已包含關稅和稅額。"
+      "duties_and_taxes_included": "已包含關稅和稅額。",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "媒體庫"
@@ -215,6 +216,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "找不到頁面",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "找不到與「{{ terms }}」相符的結果。請檢查拼字或使用其他字詞。",
       "results_with_count": {
@@ -258,10 +263,6 @@
         "error_heading": "請調整以下內容：",
         "title": "聯絡表單"
       }
-    },
-    "404": {
-      "title": "找不到頁面",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -373,16 +374,16 @@
       "step_error": "只能以 {{ step }} 為增量新增此品項"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "國家/地區",
     "language_label": "語言",

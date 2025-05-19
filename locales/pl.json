@@ -179,7 +179,8 @@
       "product_variants": "Warianty produktów",
       "taxes_included": "Z wliczonymi podatkami.",
       "duties_included": "Z wliczonymi cłami.",
-      "duties_and_taxes_included": "Z wliczonymi cłami i podatkami."
+      "duties_and_taxes_included": "Z wliczonymi cłami i podatkami.",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "Galeria multimediów"
@@ -223,6 +224,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Nie znaleziono strony",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "Nie znaleziono wyników dla “{{ terms }}”. Sprawdź pisownię lub użyj innego słowa lub zwrotu.",
       "page": "Strona",
@@ -276,10 +281,6 @@
         "error_heading": "Dostosuj następujące dane:",
         "title": "Formularz kontaktowy"
       }
-    },
-    "404": {
-      "title": "Nie znaleziono strony",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -397,16 +398,16 @@
       "step_error": "Możesz dodać tę pozycję tylko z przyrostem o {{ step }}"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "Kraj/region",
     "language_label": "Język",

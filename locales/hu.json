@@ -177,7 +177,8 @@
       },
       "taxes_included": "Tartalmazza az adókat.",
       "duties_included": "Tartalmazza a vámokat.",
-      "duties_and_taxes_included": "Tartalmazza a vámokat és az adókat."
+      "duties_and_taxes_included": "Tartalmazza a vámokat és az adókat.",
+      "size_guide": "Size guide"
     },
     "modal": {
       "label": "Médiatár"
@@ -215,6 +216,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "Nem találjuk az oldalt",
+      "subtext": "404-es hiba történt."
+    },
     "search": {
       "no_results": "Nincs találat erre: {{ terms }}. Ellenőrizd a helyesírást, vagy írj be egy másik szót vagy kifejezést.",
       "results_with_count": {
@@ -258,10 +263,6 @@
         "error_heading": "Kérjük, helyesbítsd a következőket:",
         "title": "Kapcsolattartói űrlap"
       }
-    },
-    "404": {
-      "title": "Nem találjuk az oldalt",
-      "subtext": "404-es hiba történt."
     }
   },
   "sections": {
@@ -373,16 +374,16 @@
       "step_error": "A termék mennyisége csak {{ step }} darabos lépésekben növelhető"
     }
   },
-    "faq": {
-      "title": "FAQ",
-      "question": "Question",
-      "answer": "Answer"
-    },
-    "lookbook": {
-      "title": "Lookbook",
-      "image": "Image",
-      "link": "Link"
-    },
+  "faq": {
+    "title": "FAQ",
+    "question": "Question",
+    "answer": "Answer"
+  },
+  "lookbook": {
+    "title": "Lookbook",
+    "image": "Image",
+    "link": "Link"
+  },
   "localization": {
     "country_label": "Ország/régió",
     "language_label": "Nyelv",
