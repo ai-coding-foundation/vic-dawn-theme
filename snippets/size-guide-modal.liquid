@@ -1,0 +1,13 @@
+{{ 'size-guide-modal.css' | asset_url | stylesheet_tag }}
+
+<modal-dialog id="SizeGuideModal" class="size-guide-modal">
+  <div role="dialog" aria-modal="true" class="size-guide-modal__content" tabindex="-1">
+    <button type="button" class="size-guide-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
+      {{ 'icon-close.svg' | inline_asset_content }}
+    </button>
+    <div class="size-guide-modal__content-info">
+      {%- comment -%} Size guide content goes here {%- endcomment -%}
+      {{ size_guide_content }}
+    </div>
+  </div>
+</modal-dialog>
