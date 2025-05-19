@@ -397,6 +397,16 @@
       "step_error": "Ta artikel lahko dodate samo v korakih po {{ step }}."
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Država/regija",
     "language_label": "Jezik",

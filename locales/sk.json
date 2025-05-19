@@ -397,6 +397,16 @@
       "step_error": "Túto položku môžete pridať iba v prírastkoch po {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Krajina/oblasť",
     "language_label": "Jazyk",

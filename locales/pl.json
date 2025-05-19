@@ -397,6 +397,16 @@
       "step_error": "Możesz dodać tę pozycję tylko z przyrostem o {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Kraj/region",
     "language_label": "Język",

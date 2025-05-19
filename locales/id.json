@@ -373,6 +373,16 @@
       "step_error": "Anda hanya dapat menambahkan item ini secara inkremental sebesar {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Negara/Wilayah",
     "language_label": "Bahasa",
