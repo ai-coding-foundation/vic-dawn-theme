@@ -172,6 +172,7 @@
       "variant_sold_out_or_unavailable": "Variant sold out or unavailable",
       "video_exit_message": "{{ title }} opens full screen video in same window.",
       "view_full_details": "View full details",
+      "size_guide": "Size guide",
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "taxes_included": "Taxes included.",
@@ -349,7 +350,7 @@
       "title": "Page title"
     },
     "quick_order_list": {
-      "product_total": "Product subtotal",
+        "product_total": "Product subtotal",
       "view_cart": "View cart",
       "each": "{{ money }}/ea",
       "product": "Product",
@@ -371,6 +372,7 @@
       "cancel": "Cancel",
       "min_error": "This item has a minimum of {{ min }}",
       "max_error": "This item has a maximum of {{ max }}",
+
       "step_error": "You can only add this item in increments of {{ step }}"
     },
     "faq": {

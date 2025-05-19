@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Run the theme-check gem if installed.
+if ! command -v theme-check >/dev/null 2>&1; then
+  echo "theme-check is not installed. Install it with 'gem install theme-check'." >&2
+  exit 1
+fi
+
+exec theme-check "$@"

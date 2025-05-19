@@ -1,5 +1,7 @@
 # Dawn
 
+**Note**: This repository contains the *LiveSlowDieOld* theme built on top of Dawn. It adds a Lookbook page, FAQ section, and a size guide modal.
+
 [![Build status](https://github.com/shopify/dawn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/dawn/actions/workflows/ci.yml?query=branch%3Amain)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)
 
@@ -58,15 +60,27 @@ You can follow this [quick start guide for theme developers](https://shopify.dev
 
 ### Theme Check
 
+
 We recommend using [Theme Check](https://github.com/shopify/theme-check) as a way to validate and lint your Shopify themes.
+Install it using RubyGems:
 
-We've added Theme Check to Dawn's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Dawn.
+```bash
+gem install theme-check
+```
 
-You can also run it from a terminal with the following Shopify CLI command:
+After installation you can run the linter with the included script:
+
+```bash
+bin/theme-check
+```
+
+Or via the Shopify CLI:
 
 ```bash
 shopify theme check
 ```
+
+We've added Theme Check to Dawn's [list of VS Code extensions](/.vscode/extensions.json) so if you're using Visual Studio Code as your code editor of choice, you'll be prompted to install the [Theme Check VS Code](https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode) extension upon opening VS Code after you've forked and cloned Dawn.
 
 ### Continuous Integration
 
@@ -79,6 +93,26 @@ We love fast websites! Which is why we created [Shopify/lighthouse-ci-action](ht
 #### Shopify/theme-check-action
 
 Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
+
+## Additional features
+
+### Lookbook page
+
+1. Copy `templates/page.lookbook.json` into your theme if it isn't already present.
+2. From the Shopify admin, create a new page and assign it the **lookbook** template.
+3. Use the theme editor to customize the banner and collage sections that come with the template.
+
+### FAQ accordion
+
+1. Open the theme editor on the page where you want FAQs.
+2. Add a **Collapsible content** section.
+3. Configure each block with your questions and answers to build an accordion style FAQ.
+
+### Size Guide modal
+
+1. Create a page with your size guide information.
+2. In the product page's main section, add a **Popup** block.
+3. Select the size guide page in the block settings and adjust the link label as needed.
 
 ## Contributing
 

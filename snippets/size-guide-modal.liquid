@@ -1,0 +1,29 @@
+
+{% comment %}
+  Renders a modal with size guide content.
+
+  Accepts:
+  - block: {Object} Block object for settings
+  - content: {String} HTML content to display
+
+  Usage:
+  {% render 'size-guide-modal', block: block, content: product.metafields.custom.size_guide %}
+{% endcomment %}
+
+{% if content != blank %}
+  <modal-opener data-modal="#SizeGuideModal-{{ section.id }}-{{ block.id }}" class="size-guide-modal__opener">
+    <button type="button" class="size-guide-modal__button link" aria-haspopup="dialog">
+      {{ block.settings.label }}
+    </button>
+  </modal-opener>
+  <modal-dialog id="SizeGuideModal-{{ section.id }}-{{ block.id }}" class="size-guide-modal" {{ block.shopify_attributes }}>
+    <div role="dialog" aria-label="{{ block.settings.label }}" aria-modal="true" class="size-guide-modal__content" tabindex="-1">
+      <button type="button" class="size-guide-modal__toggle" aria-label="{{ 'accessibility.close' | t }}">
+        {{ 'icon-close.svg' | inline_asset_content }}
+      </button>
+      <div class="size-guide-modal__content-info rte">
+        {{ content }}
+      </div>
+    </div>
+  </modal-dialog>
+{% endif %}
