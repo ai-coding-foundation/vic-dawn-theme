@@ -373,6 +373,16 @@
       "step_error": "このアイテムは、{{ step }}の増分でのみ追加できます"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "国/地域",
     "language_label": "言語",

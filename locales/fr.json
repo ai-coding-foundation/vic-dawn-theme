@@ -385,6 +385,16 @@
       "step_error": "Vous pouvez ajouter cet article uniquement par incréments de {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Pays/région",
     "language_label": "Langue",

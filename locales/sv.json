@@ -373,6 +373,16 @@
       "step_error": "Du kan endast lägga till den här artikeln med ökningar om {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Land/Region",
     "language_label": "Språk",

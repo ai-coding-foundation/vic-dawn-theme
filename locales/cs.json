@@ -397,6 +397,16 @@
       "step_error": "Tuto položku můžete přidat jen v přírůstcích hodnoty: {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Země/oblast",
     "language_label": "Jazyk",

@@ -373,6 +373,16 @@
       "step_error": "Bạn chỉ có thể thêm mặt hàng này theo đơn vị giao dịch {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Quốc gia/khu vực",
     "language_label": "Ngôn ngữ",

@@ -373,6 +373,16 @@
       "step_error": "A termék mennyisége csak {{ step }} darabos lépésekben növelhető"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Ország/régió",
     "language_label": "Nyelv",

@@ -373,6 +373,16 @@
       "step_error": "Je kunt dit artikel alleen toevoegen in stappen van {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Land/regio",
     "language_label": "Taal",

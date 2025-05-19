@@ -373,6 +373,16 @@
       "step_error": "คุณสามารถเพิ่มสินค้านี้ได้ทีละ {{ step }} รายการในแต่ละครั้งเท่านั้น"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "ประเทศ/ภูมิภาค",
     "language_label": "ภาษา",

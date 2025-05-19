@@ -373,6 +373,16 @@
       "step_error": "Du kannst diesen Artikel nur in Abstufungen von {{ step }} hinzufügen."
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Land/Region",
     "language_label": "Sprache",

@@ -397,6 +397,16 @@
       "step_error": "Galima pridėti tik po {{ step }} vnt. šios prekės"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Šalis / regionas",
     "language_label": "Kalba",

@@ -373,6 +373,16 @@
       "step_error": "只能以 {{ step }} 為增量新增此品項"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "國家/地區",
     "language_label": "語言",

@@ -373,6 +373,16 @@
       "step_error": "Du kan bare legge til denne varen i multipler av {{ step }}"
     }
   },
+    "faq": {
+      "title": "FAQ",
+      "question": "Question",
+      "answer": "Answer"
+    },
+    "lookbook": {
+      "title": "Lookbook",
+      "image": "Image",
+      "link": "Link"
+    },
   "localization": {
     "country_label": "Land/region",
     "language_label": "Språk",
