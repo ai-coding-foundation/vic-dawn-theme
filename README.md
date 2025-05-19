@@ -80,6 +80,26 @@ We love fast websites! Which is why we created [Shopify/lighthouse-ci-action](ht
 
 Dawn runs [Theme Check](#Theme-Check) on every commit via [Shopify/theme-check-action](https://github.com/Shopify/theme-check-action).
 
+## Additional features
+
+### Lookbook page
+
+1. Copy `templates/page.lookbook.json` into your theme if it isn't already present.
+2. From the Shopify admin, create a new page and assign it the **lookbook** template.
+3. Use the theme editor to customize the banner and collage sections that come with the template.
+
+### FAQ accordion
+
+1. Open the theme editor on the page where you want FAQs.
+2. Add a **Collapsible content** section.
+3. Configure each block with your questions and answers to build an accordion style FAQ.
+
+### Size Guide modal
+
+1. Create a page with your size guide information.
+2. In the product page's main section, add a **Popup** block.
+3. Select the size guide page in the block settings and adjust the link label as needed.
+
 ## Contributing
 
 Want to make commerce better for everyone by contributing to Dawn? We'd love your help! Please read our [contributing guide](https://github.com/Shopify/dawn/blob/main/.github/CONTRIBUTING.md) to learn about our development process, how to propose bug fixes and improvements, and how to build for Dawn.
