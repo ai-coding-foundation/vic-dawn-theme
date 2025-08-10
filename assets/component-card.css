@@ -290,9 +290,11 @@
   border-radius: 50%;
   background: rgba(var(--color-background), 0.7);
   border: 1px solid rgba(var(--color-foreground), 0.15);
+  transition: background-color var(--duration-short) ease, transform var(--duration-short) ease;
 }
 .wishlist-button .svg-wrapper { width: 18px; height: 18px; }
 .wishlist-button.is-active { background: rgba(var(--color-foreground), 0.1); }
+.wishlist-button:hover { transform: translateY(-1px); }
 
 .card__badge.top {
   align-self: flex-start;
