@@ -276,6 +276,24 @@
   justify-self: flex-start;
 }
 
+/* Wishlist button */
+.wishlist-button {
+  position: absolute;
+  z-index: 2;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(var(--color-background), 0.7);
+  border: 1px solid rgba(var(--color-foreground), 0.15);
+}
+.wishlist-button .svg-wrapper { width: 18px; height: 18px; }
+.wishlist-button.is-active { background: rgba(var(--color-foreground), 0.1); }
+
 .card__badge.top {
   align-self: flex-start;
   grid-row-start: 1;

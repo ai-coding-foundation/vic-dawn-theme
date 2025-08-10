@@ -313,6 +313,12 @@ cart-drawer-items {
   text-align: left;
 }
 
+/* Free shipping progress */
+.free-shipping { margin: 0.5rem 0 1rem; }
+.free-shipping__message { margin-bottom: 0.4rem; font-size: 1.3rem; }
+.free-shipping__bar { height: 0.4rem; width: 100%; background: rgba(var(--color-foreground), 0.1); border-radius: 999px; overflow: hidden; }
+.free-shipping__value { height: 100%; width: 0%; background: rgb(var(--color-foreground)); transform-origin: left center; }
+
 .cart-drawer .product-option dd {
   word-break: break-word;
 }

@@ -52,6 +52,17 @@
       {%- if show_badges %} price--show-badge{% endif -%}
     "
   >
+    {%- if product and product.tags contains 'Handmade' -%}
+      <span class="badge">{{ 'custom.badge.handmade' | t | default: 'Handmade' }}</span>
+    {%- endif -%}
+    {%- assign is_new = false -%}
+    {%- if product and product.published_at -%}
+      {%- assign days_since = now | date: '%s' | minus: product.published_at | date: '%s' | divided_by: 86400 -%}
+      {%- if days_since < 30 -%}{% assign is_new = true %}{%- endif -%}
+    {%- endif -%}
+    {%- if is_new -%}
+      <span class="badge">{{ 'custom.badge.new' | t | default: 'Neu' }}</span>
+    {%- endif -%}
     <div class="price__container">
       {%- comment -%}
         Explanation of description list:

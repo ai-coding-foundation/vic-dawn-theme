@@ -83,6 +83,16 @@
           id="ProductInfo-{{ section.id }}"
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
+          <button
+            class="wishlist-button"
+            type="button"
+            aria-pressed="false"
+            data-wishlist-button
+            data-product-id="{{ product.id }}"
+            title="{{ 'general.accessibility.add_to_wishlist' | default: 'Favorit' }}"
+          >
+            <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+          </button>
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {%- for block in section.blocks -%}
@@ -209,6 +219,21 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+              {%- when 'personalization' -%}
+                <div class="product__text" {{ block.shopify_attributes }}>
+                  <label class="form__label" for="Personalization-{{ section.id }}">
+                    {{- block.settings.label | escape -}}
+                  </label>
+                  <input
+                    id="Personalization-{{ section.id }}"
+                    type="text"
+                    class="field__input"
+                    name="properties[{{ block.settings.property_key | default: 'Personalization' }}]"
+                    maxlength="{{ block.settings.maxlength }}"
+                    placeholder="{{ block.settings.placeholder }}"
+                    form="{{ product_form_id }}"
+                  >
+                </div>
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -233,7 +258,9 @@
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                   {{ block.shopify_attributes }}
                 >
-                  {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+                  {%- assign cart_qty = cart
+                    | item_count_for_variant: product.selected_or_first_available_variant.id
+                  -%}
                   <label class="quantity__label form__label" for="Quantity-{{ section.id }}">
                     {{ 'products.product.quantity.label' | t }}
                     <span class="quantity__rules-cart{% if cart_qty == 0 %} hidden{% endif %}">
@@ -351,7 +378,10 @@
                                 </dt>
                                 <dd>
                                   <span class="price-per-item--current">
-                                    {{- 'products.product.volume_pricing.price_at_each_html' | t: price: variant_price -}}
+                                    {{-
+                                      'products.product.volume_pricing.price_at_each_html'
+                                      | t: price: variant_price
+                                    -}}
                                   </span>
                                 </dd>
                               </dl>
@@ -667,6 +697,29 @@
       </div>
     </div>
 
+    {%- if section.settings.enable_mobile_sticky_atc -%}
+      <div class="product__mobile-atc small-hide-up">
+        <form action="{{ routes.cart_add_url }}" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <button class="button button--full-width">{{ 'products.product.add_to_cart' | t }}</button>
+        </form>
+      </div>
+      <style>
+        @media screen and (max-width: 749px) {
+          .product__mobile-atc {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0.8rem;
+            background: rgb(var(--color-background));
+            border-top: 1px solid rgba(var(--color-foreground), 0.1);
+            z-index: 3;
+          }
+        }
+      </style>
+    {%- endif -%}
+
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
@@ -939,6 +992,17 @@
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
         }
+      ]
+    },
+    {
+      "type": "personalization",
+      "name": "Personalization",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Personalisierung (optional)" },
+        { "type": "text", "id": "property_key", "label": "Line item property key", "default": "Personalization" },
+        { "type": "text", "id": "placeholder", "label": "Placeholder", "default": "Name, Datum, Nachricht ..." },
+        { "type": "range", "id": "maxlength", "label": "Max length", "min": 10, "max": 80, "step": 5, "default": 40 }
       ]
     },
     {
@@ -1684,7 +1748,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_2.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_2",
@@ -1884,7 +1948,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_3.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_3",
@@ -2092,6 +2156,12 @@
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
     {
+      "type": "checkbox",
+      "id": "enable_mobile_sticky_atc",
+      "default": true,
+      "label": "Enable mobile sticky Add to Cart"
+    },
+    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
@@ -2186,7 +2256,7 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
-    },    
+    },
     {
       "type": "select",
       "id": "media_position",

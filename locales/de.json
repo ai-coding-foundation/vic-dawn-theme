@@ -535,5 +535,17 @@
       "expanded": "Formular für den Empfänger des Gutscheins erweitert",
       "collapsed": "Formular für den Empfänger des Gutscheins minimiert"
     }
+  },
+  "custom": {
+    "badge": {
+      "handmade": "Handgemacht",
+      "new": "Neu"
+    }
+  },
+  "cart": {
+    "free_shipping": {
+      "spend_more": "Noch {{ amount }} bis zum Gratisversand",
+      "achieved": "Gratisversand erreicht!"
+    }
   }
 }

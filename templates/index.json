@@ -192,7 +192,11 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    }
+    },
+    "value_props": { "type": "value-props", "settings": { "title": "Warum bei uns kaufen?", "heading_size": "h2", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 } },
+    "testimonials": { "type": "testimonials", "settings": { "title": "Das sagen unsere Kundinnen", "heading_size": "h2", "slides_per_page": 1, "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 } },
+    "about_preview": { "type": "about-preview", "settings": { "subheading": "Unsere Geschichte", "heading": "Handgefertigter Schmuck mit Seele", "heading_size": "h2", "text": "<p>Jedes Stück wird mit Liebe gefertigt – für magische Momente.<\/p>", "button_label": "Unsere Geschichte", "button_link": "/pages/about", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 } },
+    "ig_feed": { "type": "instagram-feed", "settings": { "title": "Folge uns auf Instagram", "handle": "feenmanufaktur", "color_scheme": "scheme-1", "padding_top": 28, "padding_bottom": 28 } }
   },
-  "order": ["fancy_hero", "image_banner", "rich_text", "featured_collection", "collage", "video", "multicolumn"]
+  "order": ["fancy_hero", "image_banner", "value_props", "featured_collection", "rich_text", "testimonials", "about_preview", "ig_feed", "collage", "video", "multicolumn"]
 }

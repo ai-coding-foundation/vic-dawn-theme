@@ -537,5 +537,17 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "custom": {
+    "badge": {
+      "handmade": "Handmade",
+      "new": "New"
+    }
+  },
+  "cart": {
+    "free_shipping": {
+      "spend_more": "Spend {{ amount }} more for free shipping",
+      "achieved": "You’ve unlocked free shipping!"
+    }
   }
 }

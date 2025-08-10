@@ -1,0 +1,101 @@
+<section class="section section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+  {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+
+  {%- style -%}
+    .section-{{ section.id }}-padding { padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px; padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px; }
+    @media (min-width: 750px) { .section-{{ section.id }}-padding { padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; } }
+    .about__grid { display: grid; gap: 24px; grid-template-columns: 1fr; align-items: center; }
+    @media (min-width: 990px) { .about__grid { grid-template-columns: 1fr 1fr; } .about__grid--reverse { direction: rtl; } .about__grid--reverse > * { direction: ltr; } }
+    .about__media .global-media-settings { overflow: hidden; }
+  {%- endstyle -%}
+
+  <div class="page-width">
+    <div class="about__grid {% if section.settings.image_position == 'right' %}about__grid--reverse{% endif %}">
+      <div class="about__media">
+        <div class="global-media-settings">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy' }}
+          {%- else -%}
+            {{ 'square.svg' | inline_asset_content }}
+          {%- endif -%}
+        </div>
+      </div>
+      <div class="about__content">
+        {%- if section.settings.subheading != blank -%}
+          <p class="subtitle">{{ section.settings.subheading }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2 class="{{ section.settings.heading_size }}">{{ section.settings.heading | escape }}</h2>
+        {%- endif -%}
+        <div class="rte">{{ section.settings.text }}</div>
+        {%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+          <a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About preview",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "subheading", "label": "Subheading", "default": "Unsere Geschichte" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Handgefertigter Schmuck mit Seele" },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "default": "h2",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" }
+      ]
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Jedes Stück wird mit Liebe in Trier gefertigt – für magische Momente und besondere Anlässe.<\/p>"
+    },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position (desktop)",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Unsere Geschichte" },
+    { "type": "url", "id": "button_link", "label": "Button link", "default": "/pages/about" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "t:sections.all.colors.label", "default": "scheme-1" },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [{ "name": "About preview", "category": "Text" }]
+}
+{% endschema %}
