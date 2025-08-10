@@ -184,21 +184,21 @@
         "image_banner": {
           "type": "image-banner",
           "blocks": {
-            "heading": {
+            "image_heading": {
               "type": "heading",
               "settings": {
                 "heading": "Handgefertigter Schmuck mit Seele",
                 "heading_size": "h1"
               }
             },
-            "text": {
+            "image_text": {
               "type": "text",
               "settings": {
                 "text": "Einzigartige Schmuckstücke aus hochwertigen Materialien – perfekt für besondere Momente",
                 "text_style": "body"
               }
             },
-            "button": {
+            "image_button": {
               "type": "buttons",
               "settings": {
                 "button_label_1": "Kollektion entdecken",
@@ -211,9 +211,9 @@
             }
           },
           "block_order": [
-            "heading",
-            "text",
-            "button"
+            "image_heading",
+            "image_text",
+            "image_button"
           ],
           "settings": {
             "image_overlay_opacity": 40,
@@ -230,14 +230,14 @@
         "rich_text": {
           "type": "rich-text",
           "blocks": {
-            "heading": {
+            "rich_heading": {
               "type": "heading",
               "settings": {
                 "heading": "Talk about your brand",
                 "heading_size": "h1"
               }
             },
-            "text": {
+            "rich_text_block": {
               "type": "text",
               "settings": {
                 "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
@@ -245,8 +245,8 @@
             }
           },
           "block_order": [
-            "heading",
-            "text"
+            "rich_heading",
+            "rich_text_block"
           ],
           "settings": {
             "color_scheme": "scheme-1",
