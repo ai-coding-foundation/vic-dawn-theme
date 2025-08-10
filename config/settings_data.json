@@ -187,26 +187,26 @@
             "heading": {
               "type": "heading",
               "settings": {
-                "heading": "Image banner",
-                "heading_size": "h0"
+                "heading": "Handgefertigter Schmuck mit Seele",
+                "heading_size": "h1"
               }
             },
             "text": {
               "type": "text",
               "settings": {
-                "text": "Give customers details about the banner image(s) or content on the template.",
+                "text": "Einzigartige Schmuckstücke aus hochwertigen Materialien – perfekt für besondere Momente",
                 "text_style": "body"
               }
             },
             "button": {
               "type": "buttons",
               "settings": {
-                "button_label_1": "Shop all",
-                "button_link_1": "shopify://collections/all",
-                "button_style_secondary_1": true,
-                "button_label_2": "",
-                "button_link_2": "",
-                "button_style_secondary_2": false
+                "button_label_1": "Kollektion entdecken",
+                "button_link_1": "/collections/all",
+                "button_style_secondary_1": false,
+                "button_label_2": "Brautschmuck",
+                "button_link_2": "/collections/bridal",
+                "button_style_secondary_2": true
               }
             }
           },
@@ -379,6 +379,51 @@
             "padding_bottom": 36
           }
         },
+        "value_props": {
+          "type": "value-props",
+          "blocks": {
+            "vp1": { "type": "item", "settings": { "heading": "Handgefertigt in Deutschland", "text": "Mit Liebe und Sorgfalt gefertigt.", "icon": "icon-heart.svg" } },
+            "vp2": { "type": "item", "settings": { "heading": "Hochwertige Materialien", "text": "Perlen, Silber & langlebige Komponenten.", "icon": "icon-checkmark.svg" } },
+            "vp3": { "type": "item", "settings": { "heading": "Kostenloser Versand ab 50€", "text": "Schnell & sicher geliefert.", "icon": "icon-truck.svg" } },
+            "vp4": { "type": "item", "settings": { "heading": "Personalisierung möglich", "text": "Individuelle Wünsche willkommen.", "icon": "icon-star.svg" } }
+          },
+          "block_order": ["vp1","vp2","vp3","vp4"],
+          "settings": { "title": "Warum bei uns kaufen?", "heading_size": "h2", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 }
+        },
+        "testimonials": {
+          "type": "testimonials",
+          "blocks": {
+            "t1": { "type": "testimonial", "settings": { "quote": "<p>Wunderschöner Schmuck und toller Service!<\/p>", "author": "Anna", "rating": 5 } },
+            "t2": { "type": "testimonial", "settings": { "quote": "<p>Perfekt für unsere Hochzeit – absolute Empfehlung!<\/p>", "author": "Julia", "rating": 5 } },
+            "t3": { "type": "testimonial", "settings": { "quote": "<p>Liebevolle Handarbeit, man spürt die Qualität.<\/p>", "author": "Lisa", "rating": 5 } }
+          },
+          "block_order": ["t1","t2","t3"],
+          "settings": { "title": "Das sagen unsere Kundinnen", "heading_size": "h2", "slides_per_page": 1, "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 }
+        },
+        "about_preview": { "type": "about-preview", "settings": { "subheading": "Unsere Geschichte", "heading": "Handgefertigter Schmuck mit Seele", "heading_size": "h2", "text": "<p>Jedes Stück wird mit Liebe gefertigt – für magische Momente.<\/p>", "button_label": "Unsere Geschichte", "button_link": "/pages/about", "color_scheme": "scheme-1", "padding_top": 36, "padding_bottom": 36 } },
+        "ig_feed": {
+          "type": "instagram-feed",
+          "blocks": {
+            "ig1": { "type": "post", "settings": { } },
+            "ig2": { "type": "post", "settings": { } },
+            "ig3": { "type": "post", "settings": { } },
+            "ig4": { "type": "post", "settings": { } },
+            "ig5": { "type": "post", "settings": { } },
+            "ig6": { "type": "post", "settings": { } }
+          },
+          "block_order": ["ig1","ig2","ig3","ig4","ig5","ig6"],
+          "settings": { "title": "Folge uns auf Instagram", "handle": "feenmanufaktur", "color_scheme": "scheme-1", "padding_top": 28, "padding_bottom": 28 }
+        },
+        "email_signup": {
+          "type": "email-signup-banner",
+          "settings": {
+            "heading": "Magische Momente & Exklusive Angebote",
+            "heading_size": "h2",
+            "color_scheme": "scheme-1",
+            "padding_top": 28,
+            "padding_bottom": 36
+          }
+        },
         "main-password-header": {
           "type": "main-password-header",
           "settings": {
@@ -393,12 +438,15 @@
         }
       },
       "order": [
-        "fancy_hero",
         "image_banner",
-        "rich_text",
+        "value_props",
         "featured_collection",
+        "about_preview",
+        "ig_feed",
+        "testimonials",
+        "email_signup",
+        "rich_text",
         "collage",
-        "video",
         "multicolumn"
       ]
     }
