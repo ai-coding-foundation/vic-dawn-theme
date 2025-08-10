@@ -1458,8 +1458,8 @@
         "type": "range",
         "id": "cart_free_shipping_threshold",
         "min": 0,
-        "max": 100000,
-        "step": 500,
+        "max": 9950,
+        "step": 50,
         "label": "Free shipping threshold (in minor units)",
         "default": 5000
       }
